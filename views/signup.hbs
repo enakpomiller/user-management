@@ -1,0 +1,18 @@
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"> Sign Up </li>
+  </ol>
+</nav>
+{{#if alert}}
+
+<script>
+swal.fire('success','{{alert}}','success');
+</script>
+
+{{/if}}
+<form class="row g-3 needs-validation" method="post" action="/signup">
+ {{>signupform}}
+   </form>

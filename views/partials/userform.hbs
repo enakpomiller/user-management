@@ -1,0 +1,49 @@
+
+       <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
+    <div class="col-6">
+        <div class="form-floating md-3">
+        <input type="text" class="form-control" required value="{{this.fname}}" id="floatingInput" placeholder="first name" name="fname">
+        <label for="floatingInput">First Name</label>
+    </div>
+ </div>
+     <div class="col-6">
+        <div class="form-floating md-3">
+        <input type="text" class="form-control" required value="{{this.othernames}}"  id="floatingInput" placeholder="last name" name="othernames">
+        <label for="floatingInput">Last Name</label>
+    </div>
+ </div>
+      <div class="col-6">
+        <div class="form-floating md-3">
+        <input type="email" class="form-control" required value="{{this.email}}"  id="floatingInput" placeholder="" name="email">
+        <label for="floatingInput">email</label>
+    </div>
+ </div>
+     <div class="col-6">
+        <div class="form-floating md-3">
+        <input type="text" class="form-control" required value="{{this.phone}}"  id="floatingInput" placeholder="phone nmber" name="phone">
+        <label for="floatingInput">Phone</label>
+    </div>
+ </div>
+      <div class="col-12">
+        <div class="form-floating md-3">
+        <label for="floatingInput">Comment</label>
+        <textarea cols="3"  name="comment"></textarea>
+    </div>
+ </div>
+
+<div class="col-6">
+   <div class="form-floating md-3">
+   <input type="text" class="form-control" required value="{{this.password}}"  id="floatingInput" placeholder="phone nmber" name="password">
+   <label for="floatingInput">Phone</label>
+</div>
+</div>
+ <div class="col-6 d-grid">
+     <button class="btn btn-primary" type="submit">submit</button>
+ </div>
+
+
+
+    <script>
+      CKEDITOR.replace( 'comment' );
+     </script>

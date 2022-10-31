@@ -1,0 +1,52 @@
+
+  {{#if removedUser}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+   user has been removed .
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+   {{/if}}
+
+
+ <div class="row">
+     <div class="col-6"><h1> user </h1></div>
+     <div class="col-6 d-flex justify-content-end">
+     <a href="/adduser"  type="button" class="btn btn-primary align-self-center">+Add user</a>
+     <a href="/deleterecords"  type="button" class="btn btn-primary align-self-center" style="margin-left:10px;;"><i class="bi bi-trash">deleted Users</i></i></a>
+     </div>
+ </div>
+
+ {{#if alert}}
+    {{alert}}
+    {{/if}}
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">s/n</th>
+      <th scope="col">First Name </th>
+      <th scope="col">Last Name </th>
+      <th scope="col">Email </th>
+      <th scope="col">Phone </th>
+    <th scope="col">Comment </th>
+     <th scope="col" class="text-end">Action </th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each rows}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.fname}}</td>
+      <td>{{this.othernames}}</td>
+      <td>{{this.email}}</td>
+       <td>{{this.phone}}</td>
+       <td>{{this.comment}}</td>
+      <td class="text-end">
+          <a href="" type="button" class="btn btn-success btn-small"><i class="bi bi-eye"></i>view </a>
+         <a href="/edituser/{{this.id}}" type="button" class="btn btn-warning btn-small"><i class="bi bi-pencil"></i>edit</a>
+         <a href="/{{this.id}}" type="button" onclick="return confirm('do you want to add')" class="btn btn-danger btn-small"><i class="bi bi-trash"></i>delete </a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
